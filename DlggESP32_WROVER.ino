@@ -48,5 +48,5 @@ void loop(){
     Serial.println("FILE NOT OK !!!");
   }
     myFile.print(x);
-    myFile.println(", tá na hora de molhar o biscoito");
+    myFile.println(", tá na hora jair jair embora");
 }

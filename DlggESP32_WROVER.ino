@@ -18,10 +18,6 @@
 
 #define ONE_BIT_MODE  true
 
-
-
-
-
 void setup(){
     Serial.begin(115200);
 

@@ -3,7 +3,7 @@
 
 #include "Arduino.h"
 
-#define sampleSize 3
+#define sampleSize 9
 
 
 //Função para calulalar a media movel variação de altura e da temperatura na traseira do veiculo

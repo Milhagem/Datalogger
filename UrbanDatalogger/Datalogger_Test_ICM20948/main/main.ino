@@ -2,7 +2,7 @@
 #include "BMP.hpp"
 #include "MPU.hpp"
 #include <SoftwareSerial.h>
-
+#include <Wire.h>
 const int GPS_RX_PIN = 14;  // Pino conectado ao GPS TX
 const int GPS_TX_PIN = 12;  // Pino conectado ao GPS RX
 
@@ -38,9 +38,9 @@ extern volatile float mediaT;
 SoftwareSerial gpsSerial(GPS_RX_PIN, GPS_TX_PIN);
 
 void setup() {
-  Serial.begin(9600);
   Wire.begin();
-  delay(2000);
+  Serial.begin(115200);
+  while(!Serial) {}
 
   gpsSerial.begin(9600);
   //---------------------IMU configs-------------------
@@ -96,7 +96,7 @@ void loop() {
     executaMPU();
   }
 
-  while((millis() % 1000)){
+ while((millis() % 1000)){
     if (gpsSerial.available()) {
     // Read the available data
     char gps_reading = gpsSerial.read();
@@ -104,7 +104,7 @@ void loop() {
     // Pass it to the Serial Monitor
     Serial.write(gps_reading);
     }
-    //delay(1000);
+    delay(1000);
   }
   Serial.println("");
 }

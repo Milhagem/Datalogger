@@ -1,5 +1,6 @@
+#include <Wire.h>
 #include <ICM20948_WE.h>
-#define ICM20948_ADDR 0x68
+#define ICM20948_ADDR 0x69
 
 ICM20948_WE myIMU = ICM20948_WE(ICM20948_ADDR);
 // Variáveis para o filtro complementar
@@ -28,11 +29,11 @@ void executaMPU(){
   float resultantG = myIMU.getResultantG(&gVal);
    
   Serial.println("g-values (x,y,z):");
-  Serial.print(gVal.x * 9.81);
+  Serial.print(gVal.x);
   Serial.print("   ");
-  Serial.print(gVal.y * 9.81);
+  Serial.print(gVal.y);
   Serial.print("   ");
-  Serial.println(gVal.z * 9.81);
+  Serial.println(gVal.z);
   Serial.print("Resultant g: ");
   Serial.println(resultantG * 9.81);
   Serial.println("*************************************");

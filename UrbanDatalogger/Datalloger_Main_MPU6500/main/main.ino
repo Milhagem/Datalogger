@@ -55,8 +55,8 @@ SoftwareSerial gpsSerial(GPS_RX_PIN, GPS_TX_PIN);
 
 
 // ======== CONFIGURAÇÕES DE REDE ========
-const char* ssid = "K41S_2075f";
-const char* password = "evelynlinda";
+const char* ssid = "Diogo's Galaxy M62";
+const char* password = "awur7323";
 const char* mqtt_server = "broker.hivemq.com";   // IP do seu Node-RED ou broker Mosquitto
 
 WiFiClient espClient;

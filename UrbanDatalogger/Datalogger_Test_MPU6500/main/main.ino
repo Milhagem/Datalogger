@@ -109,13 +109,13 @@ void loop() {
     //Execução BMP
     BMPaltura = bmp.readAltitude(SEALEVELPRESSURE_HPA);
      BMPtemp = bmp.temperature;
-    calculaMedia(BMPaltura, BMPtemp);
+    //calculaMedia(BMPaltura, BMPtemp);
 
     executaMPU();
     //delay(1000);
   }
 
-  while((millis() % 1000)){
+  /*while((millis() % 1000)){
     if (gpsSerial.available()) {
    // Read the available data
     char gps_reading = gpsSerial.read();
@@ -124,8 +124,8 @@ void loop() {
     Serial.write(gps_reading);
     }
     //delay(1000);
-  }
+  }*/
 
-  Serial.println("");
+  //Serial.println("");
 }
 
